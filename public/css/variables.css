@@ -1,0 +1,18 @@
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --red-color: #ea0000;
+    --nav-unhovered-border: 2px solid transparent;
+    --nav-hovered-border: 2px solid #333;
+    --header-tools-border: 1px solid #ccc;
+    --nav-active-color: #ea0000;
+    --nav-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .06);
+    --nav-link-color: #333;
+    --subnav-box-shadow: 0 0 8px #00000030;
+    --search-box-bg: #f7f7f7;
+    --category-item-bs: 0 0 4px 0 #ccc;
+    --category-item-hovered-bs: 0 0 4px 2px #ccc;
+    --text-hovered: #0097b2;
+    --product-item-border: 1px solid #edf2f5;
+    --product-item-bs: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+}
