@@ -9,7 +9,7 @@
     --nav-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .06);
     --nav-link-color: #333;
     --subnav-box-shadow: 0 0 8px #00000030;
-    --search-box-bg: #f7f7f7;
+    --input-box-bg: #f7f7f7;
     --category-item-bs: 0 0 4px 0 #ccc;
     --category-item-hovered-bs: 0 0 4px 2px #ccc;
     --text-hovered: #0097b2;
@@ -17,4 +17,5 @@
     --product-item-bs: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
     --primary-text-color: #333333;
     --footer-bg-color: #111111;
+    --primary-btn-color: #0595af;
 }
