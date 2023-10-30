@@ -1,0 +1,63 @@
+@import url(./variables.css);
+section {
+    background-color: var(--admin-bg-color);
+    height: 100vh;
+}
+
+.products-list-container {
+    padding: 50px 0;
+}
+
+.products-list-table {
+    width: 100%;
+    border: none;
+    box-shadow: var(--table-bs);
+    background-color: var(--table-bg-color);
+    border-radius: var(--table-br);
+}
+
+.products-list-table .table-header-cell {
+    width: calc(100% / 8);
+    text-align: center;
+    padding: 15px 0;
+    white-space: nowrap;
+    background-color: var(--table-heading-bg-color);
+    color: var(--table-heading-color);
+    font-size: var(--table-heading-fs);
+    font-weight: 500;
+    border-top: var(--table-heading-border-top);
+    border-bottom: var(--table-heading-border-top);
+}
+
+.products-list-table .table-header-cell:first-child,
+.products-list-table .table-header-cell:nth-child(2),
+.products-list-table .table-header-cell:nth-child(3) {
+    width: 5%;
+}
+
+.products-list-table .table-header-cell:nth-child(3) {
+    width: 20%;
+}
+
+.products-list-table .table-header-cell:nth-child(5) {
+    width: 30%;
+}
+
+.products-list-table .table-header-cell:nth-child(7) {
+    width: 8%;
+}
+
+.products-list-table .table-header-cell:nth-child(8) {
+    width: 5%;
+}
+
+.products-list-table .table-header-cell:last-child {
+    width: 7%;
+}
+
+.products-list-table tr>td {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: var(--table-cell-fs);
+    border-bottom: var(--table-cell-border);
+}

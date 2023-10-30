@@ -7,7 +7,7 @@
 }
 
 .header-logo>img {
-    max-height: 42px;
+    max-height: 48px;
 }
 
 .header-container {
@@ -65,7 +65,7 @@
 }
 
 .right-content-contact>.contact-phone {
-    font-size: 15.4px;
+    font-size: 17px;
     color: var(--red-color);
     letter-spacing: 0.4px;
 }

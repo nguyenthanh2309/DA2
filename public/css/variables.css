@@ -2,8 +2,8 @@
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
     --red-color: #ea0000;
-    --nav-unhovered-border: 2px solid transparent;
-    --nav-hovered-border: 2px solid #333;
+    --nav-unhovered-border: 3px solid transparent;
+    --nav-hovered-border: 3px solid #333;
     --header-tools-border: 1px solid #ccc;
     --nav-active-color: #ea0000;
     --nav-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .06);
@@ -18,4 +18,14 @@
     --primary-text-color: #333333;
     --footer-bg-color: #111111;
     --primary-btn-color: #0595af;
+    --table-bs: 0 1px 0 #00000012;
+    --table-bg-color: #ffffff;
+    --table-br: 12px;
+    --table-heading-bg-color: #f7f7f7;
+    --table-heading-color: #616161;
+    --table-heading-border-top: 1px solid #e3e3e3;
+    --table-heading-fs: 13px;
+    --table-cell-fs: 14px;
+    --table-cell-border: 1px solid #e3e3e3;
+    --admin-bg-color: #f1f1f1;
 }
