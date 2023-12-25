@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Document</title>
+    <script type="module" src="../js/index.js" defer></script>
+    <script type="module" src="../js/login.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +24,7 @@
         <div class="layout-container">
             <div class="header-container">
                 <div class="header-logo">
-                    <img src="../public/assets/logohomeoffice-2023.png" alt="logo" />
+                    <a href="../pages/index.html"><img src="../public/assets/logohomeoffice-2023.png" alt="logo" /></a>
                 </div>
                 <div class="header-right-content">
                     <div class="right-content-contact">
@@ -34,8 +37,17 @@
                             <input type="text" name="" id="" class="search-box" placeholder="Tìm kiếm sản phẩm..." />
                             <i class="fa-solid fa-magnifying-glass search-icon"></i>
                         </div>
-                        <div class="tools-cart"> <a href=""><i class="fa-solid fa-cart-shopping cart-icon"></i></a> </div>
-                        <div class="tools-user"><i class="fa-regular fa-user user-icon"></i></div>
+                        <div class="tools-cart"> <a href="./giohang.html"><i class="fa-solid fa-cart-shopping cart-icon"></i></a> </div>
+                        <div class="tools-user-container">
+                            <button class="tools-user-btn"><i class="fa-regular fa-user user-icon"></i></button>
+                            <div class="tools-user-dropdown">
+                                <a href="#" class="dropdown-link">Đơn hàng</a>
+                                <div class="dropdown-btn-wrapper">
+                                    <a href="./dangnhap.html" class="dropdown-btn signin">ĐĂNG NHẬP</a>
+                                    <a href="./dangky.html" class="dropdown-btn signup">ĐĂNG KÝ</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,23 +182,23 @@
             </ul>
         </div>
     </nav>
-    <section class="form spacing">
+    <section class="form-section spacing">
         <div class="layout-container">
             <div class="content-container">
-                <form class="sign-in-form">
+                <form class="form" id="sign-in-form">
                     <h3 class="form-title">ĐĂNG NHẬP</h3>
                     <fieldset>
                         <div class="field-container">
-                            <label for="" class="field-label">Email <span>*</span></label>
-                            <input type="email" name="" id="" class="field-input">
+                            <label for="email" class="field-label">Email<span>*</span></label>
+                            <input type="text" id="email" class="field-input">
                         </div>
                         <div class="field-container">
-                            <label for="" class="field-label">Mật khẩu <span>*</span></label>
-                            <input type="password" name="" id="" class="field-input">
+                            <label for="password" class="field-label">Mật khẩu <span>*</span></label>
+                            <input type="password" id="password" class="field-input">
                         </div>
                     </fieldset>
                     <div class="btn-container">
-                        <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+                        <button type="button" class="submit-btn">ĐĂNG NHẬP</button>
                     </div>
                 </form>
                 <div class="register">

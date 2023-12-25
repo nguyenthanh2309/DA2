@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <script type="module" src="../js/index.js" defer></script>
+    <script type="module" src="../js/logout.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
         <div class="layout-container">
             <div class="header-container">
                 <div class="header-logo">
-                    <img src="../public/assets/logohomeoffice-2023.png" alt="logo" />
+                    <a href="./index.html"><img src="../public/assets/logohomeoffice-2023.png" alt="logo" /></a>
                 </div>
                 <div class="header-right-content">
                     <div class="right-content-contact">
@@ -33,8 +35,17 @@
                             <input type="text" name="" id="" class="search-box" placeholder="Tìm kiếm sản phẩm..." />
                             <i class="fa-solid fa-magnifying-glass search-icon"></i>
                         </div>
-                        <div class="tools-cart"> <a href=""><i class="fa-solid fa-cart-shopping cart-icon"></i></a> </div>
-                        <div class="tools-user"><i class="fa-regular fa-user user-icon"></i></div>
+                        <div class="tools-cart"> <a href="./giohang.html"><i class="fa-solid fa-cart-shopping cart-icon"></i></a> </div>
+                        <div class="tools-user-container">
+                            <button class="tools-user-btn"><i class="fa-regular fa-user user-icon"></i></button>
+                            <div class="tools-user-dropdown">
+                                <div class="dropdown-user-info">
+                                    <a href="#" class="dropdown-link">Đơn hàng</a>
+                                </div>
+                                <div class="dropdown-btn-wrapper">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -322,131 +333,187 @@
                 <h4 class="section-title">sản phẩm nổi bật</h4>
                 <ul class="product-list">
                     <li class="product-list-item">
-                        <a href="" class="item-link">
+                        <a href="./bo-2-tu-ca-nhan-cua-khoa-xep-chong-40x40x72cm-go-cao-su-TCN68042.html" class="item-link">
                             <img src="../public/assets/products/bo-2-tu-ca-nhan-xep-chong-go-cao-su.jpg" alt="" class="item-image">
-                            <span class="item-name">Bộ 2 tủ cá nhân cửa khóa xếp chồng 40x40x72cm gỗ cao su TCN68042 </span>
+                            <span class="item-name">Bộ 2 tủ cá nhân cửa khóa xếp chồng 40x40x72cm gỗ cao su TCN68042</span>
                         </a>
-                        <span class="item-price">1,560,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,560,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-co-hoc-tu-mini-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc có ngăn kéo mini 100x50cm gỗ cao su chân sắt BD68103</span>
                         </a>
-                        <span class="item-price">1,957,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,957,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ghe-lung-tua-go-cao-su-lot-nem-1a.jpg" alt="" class="item-image">
                             <span class="item-name">Ghế lưng tựa PLC khung gỗ cao su lót nệm vải bố GCF161</span>
                         </a>
-                        <span class="item-price">826,000&nbsp<span>vnđ</span></span>
+
+                        <div class="wrapper">
+                            <span class="item-price">826,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
-                    </a>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-140x60cm-go-cao-su-chan-sat-oma-ii-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc 140x60cm hệ OMA II gỗ cao su lắp ráp ngàm HBOM203</span>
                         </a>
-                        <span class="item-price">1,479,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,749,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-don-gian-co-hoc-tu-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc có ngăn kéo 120x50cm gỗ cao su BD68100</span>
                         </a>
-                        <span class="item-price">1,914,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,914,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-go-goc-tuong-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc góc tường có ngăn kéo 80x80cm gỗ cao su CD68022</span>
                         </a>
-                        <span class="item-price">2,523,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,523,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-di-dong-120x60cm-go-tram-1a.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc di động FOS 120x60cm gỗ tràm 25mm chân sắt FOS012</span>
                         </a>
-                        <span class="item-price">1,887,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,887,009<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-lam-viec-go-cao-su-chan-sat-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc có hộc tủ 120x60cm gỗ cao su chân sắt CONE BD68098</span>
                         </a>
-                        <span class="item-price">1,560,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,560,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ghe-giam-doc-cao-cap-lung-go-plywood-hien-dai-1.jpg" alt="" class="item-image">
                             <span class="item-name">Ghế giám đốc cao cấp lưng gỗ plywood chân xoay nhôm HOJO-018</span>
                         </a>
-                        <span class="item-price">4,140,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,140,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ghe-xoay-van-phong-cong-thai-hoc-1.jpg" alt="" class="item-image">
                             <span class="item-name">Ghế lưới văn phòng có tựa đầu chuẩn công thái học HOM1081R</span>
                         </a>
-                        <span class="item-price">3,990,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,990,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ghe-giam-doc-nem-simili-chan-go-MF101D-a.jpg" alt="" class="item-image">
                             <span class="item-name">Ghế lãnh đạo lưng ngả đa chiều nệm bọc simili cao cấp MF101D</span>
                         </a>
-                        <span class="item-price">3,254,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,254,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ke-sach-trang-tri-khung-sat-1a.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách 5 tầng 80x30x180cm gỗ cao su kết hợp khung sắt KS68204</span>
                         </a>
-                        <span class="item-price">2,116,000&nbsp<span>vnđ</span></span>
+
+                        <div class="wrapper">
+                            <span class="item-price">2,146,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ke-sach-4-tang--go-cao-su-12.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách 4 tầng 80x30x160cm gỗ cao su KS68205</span>
                         </a>
-                        <span class="item-price">1,932,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,932,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/tu-ke-trang-tri-phong-khach-go-cao-su.jpg" alt="" class="item-image">
                             <span class="item-name">Tủ kệ trang trí phòng khách gỗ cao su chân sắt KTB68139</span>
                         </a>
-                        <span class="item-price">2,814,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,814,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ke-sach-4-tang-go-cao-su-1.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách 4 tầng 60x30x145cm gỗ tự nhiên KS68188</span>
                         </a>
-                        <span class="item-price">1,932,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,932,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/ban-an-chan-sat-go-cao-su-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn ăn chữ nhật 160x80cm mặt gỗ cao su chân sắt BA68157</span>
                         </a>
-                        <span class="item-price">3,982,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,982,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/combo-bo-ban-ghe-ngoi-an-160x80cm-1.jpg" alt="" class="item-image">
                             <span class="item-name">Combo bộ bàn ghế ăn chữ nhật 160x80cm 4 ghế ngồi CBBA121</span>
                         </a>
-                        <span class="item-price">6,590,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">6,590,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/bo-ban-an-4-ghe-ngoi-1.jpg" alt="" class="item-image">
                             <span class="item-name">Combo bộ bàn ăn 160x80cm gỗ tràm 4 ghế ngồi CBBA118</span>
                         </a>
-                        <span class="item-price">1,560,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,560,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -580,126 +647,126 @@
                             <img src="../public/assets/products/office/ban-giam-doc-bgd68056-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn lãnh đạo 160x70cm gỗ tràm chân kết hợp tủ BGD68056</span>
                         </a>
-                        <span class="item-price">5,646,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">5,646,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-120x60cm-go-plywood-chan-sat-oval-hbov033-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc 120x60cm gỗ Plywood phủ melamin chân sắt Oval HBOV033</span>
                         </a>
-                        <span class="item-price">1,383,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,383,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-140x70cm-go-plywood-chan-sat-hbco034-03.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc 140x70cm gỗ Plywood phủ melamin chân sắt Cone HBCO034</span>
                         </a>
-                        <span class="item-price">2,194,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">2,194,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-6-uconcept-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 6 360x120 hệ UConcept chân sắt lắp ráp HBUC015</span>
                         </a>
-                        <span class="item-price">6,136,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">6,136,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-120x120cm-go-plywood-chan-xconcept-hbxc036-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 120x120cm gỗ Plywood phủ melamin hệ Xconcept HBXC036</span>
                         </a>
-                        <span class="item-price">2,853,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">2,853,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-120x120cm-go-plywood-chan-trapeze-hbtc035-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 120x120cm gỗ Plywood phủ melamin chân sắt Trapeze HBTC035</span>
                         </a>
-                        <span class="item-price">2,392,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">2,392,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-240x60cm-plywood-be-tong-hbrt050-03.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 240x60cm gỗ Plywood hệ RECTANG HBRT050</span>
                         </a>
-                        <span class="item-price">2,583,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">2,583,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-trapeze-hbtc036-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 gỗ Plywood 240x120cm chân sắt hệ Trapeze HBTC036</span>
                         </a>
-                        <span class="item-price">4,306,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-oval-hbov039-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 người 240x120cm gỗ Plywood chân hệ Uconcept HBUC047</span>
                         </a>
-                        <span class="item-price">4,211,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,211,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum3-140x60cm-he-lego2-03_mgxr-ow.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 3 bàn hình thang 140x60cm gỗ cao su hệ Lego 2 HBLG029</span>
                         </a>
-                        <span class="item-price">3,990,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">3,990,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-4-240x120cm-go-tram-chan-sat-lap-rap-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 gỗ tràm 120x240cm chân sắt lắp ráp hệ Wooden HBWD012</span>
                         </a>
-                        <span class="item-price">4,880,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,880,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-oval-hbov039-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 240x120cm gỗ Plywood phủ chân sắt Oval HBOV039</span>
                         </a>
-                        <span class="item-price">4,306,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-co-ngan-keo-tam-chan-BGD68046-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc 160x70cm 2 hộc kéo và tấm chắn BGD68055</span>
                         </a>
-                        <span class="item-price">4,594,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,594,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-co-ngan-keo-tam-chan-BGD68046-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc 160x70cm có hộc kéo và tấm chắn BGD68046</span>
                         </a>
-                        <span class="item-price">5,262,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">5,262,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-go-tram-BGD68049-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc có tấm chắn Gỗ Tràm chân sắt BGD68049</span>
                         </a>
-                        <span class="item-price">4,911,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">4,911,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-8-mini-go-plywood-he-lego-01_ob9b-13.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 8 bàn hình thang gỗ Plywood hệ Lego chân sắt Oval HBLG020</span>
                         </a>
-                        <span class="item-price">8,990,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">8,990,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum3-he-ban-lego2-go-cao-su-chan-oval-02_vnt3-h6.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 3 bàn hình thang 120x60cm gỗ cao su hệ Lego 2 HBLG025</span>
                         </a>
-                        <span class="item-price">3,590,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">3,590,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-van-phong-cum-3-nguoi-RECTANG_CONCEPT_1_-_Copy.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 3 người 240x208 Rectang Concept chân sắt lắp ráp HBRT025</span>
                         </a>
-                        <span class="item-price">7,691,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">7,691,000<span>&nbspvnđ</span></span>
                     </li>
                 </ul>
             </div>
@@ -996,126 +1063,180 @@
                             <img src="../public/assets/products/home-furniture/sofa-don-vai-xanh-GSD68054-01.png" alt="" class="item-image">
                             <span class="item-name">Ghế sofa đơn bọc vải màu xanh GSD68054</span>
                         </a>
-                        <span class="item-price">3,890,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,890,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ban-sofa-phong-khach-mat-da-khung-sat-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn sofa đôi mặt đá khung sắt TT68214</span>
                         </a>
-                        <span class="item-price">2,250,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,250,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ban-sofa-TT68119.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn sofa mặt đá khung sắt sơn tĩnh điện TT68119</span>
                         </a>
-                        <span class="item-price">2,351,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,351,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/tt68117-ban-sofa-2-tang-da-trang-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn bên sofa 2 tầng mặt đá trắng khung màu vàng đồng TT68117</span>
                         </a>
-                        <span class="item-price">1,776,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,776,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ban-trang-tri-bee-05.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn Console trang trí BEE khung sắt mặt đá CST029</span>
                         </a>
-                        <span class="item-price">3,082,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,082,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ban-console-mat-da-cst021-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn console, bàn trang trí mặt đá bo cạnh CST021</span>
                         </a>
-                        <span class="item-price">3,238,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,238,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ke-tivi-KTV68048.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ Tivi Uran2 gỗ cao su KTV68048</span>
                         </a>
-                        <span class="item-price">4,482,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4482,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ke-tivi-KTV68083.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ tivi có hộc tủ mặt đá khung vàng đồng KTV68083</span>
                         </a>
-                        <span class="item-price">3,910,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,910,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ke-giay-KG68060-01_29tr-kj.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ ghế thay giày kết hợp móc treo đồ gỗ khung sắt KG68060</span>
                         </a>
-                        <span class="item-price">1,696,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,696,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/tu-trang-tri-ktb68119-10.png" alt="" class="item-image">
                             <span class="item-name">Tủ trang trí cửa mây đế chân sắt KTB68119</span>
                         </a>
-                        <span class="item-price">2,327,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,327,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/tu-dau-giuong-TDG68044-r01.jpg" alt="" class="item-image">
                             <span class="item-name">Tủ đầu giường ANIE gỗ cao su khung sắt TDG68044</span>
                         </a>
-                        <span class="item-price">2,190,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,190,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/KB68023-2.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ đẩy di động 2 tầng gỗ cao su khung sắt Gena KB68023</span>
                         </a>
-                        <span class="item-price">1,435,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,435,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/ke-bep-KB68014.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ bếp di động KONA2 mặt gỗ tre (120x40x80cm) KB68014</span>
                         </a>
-                        <span class="item-price">3,811,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,811,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/bo-an-ghe-an-CBBA108-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bộ bàn ăn tròn 1m gỗ tràm và 4 ghế nệm CBBA108</span>
                         </a>
-                        <span class="item-price">5,192,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">5,192,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/bo-tu-bep-mini-btb68012-02.jpg" alt="" class="item-image">
                             <span class="item-name">Hệ tủ bếp mini gỗ cao su 1m2 nhỏ gọn hiện đại BTB68012</span>
                         </a>
-                        <span class="item-price">7,920,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">7,920,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/tu-bep-duoi-1m2-tbd68009-01.jpg" alt="" class="item-image">
                             <span class="item-name">Tủ bếp dưới 1m2 gỗ cao su cửa chạy viền TBD68009</span>
                         </a>
-                        <span class="item-price">5,534,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">5,534,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/bo-ban-ghe-an-cbba100-01.jpg" alt="" class="item-image">
                             <span class="item-name">Combo bàn ăn mặt đá và 4 ghế Collin nệm simili CBBA100</span>
                         </a>
-                        <span class="item-price">7,990,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">7,990,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/home-furniture/bo-ban-ghe-trang-diem-BTD68052-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bộ bàn ghế trang điểm chân côn BTD68052</span>
                         </a>
-                        <span class="item-price">3,127,000&nbsp<span>vnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,127,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -1240,84 +1361,84 @@
                             <img src="../public/assets/products/shelf/ke-khung-sat-KTB68068.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ trang trí có hộc gỗ cao su khung sắt 100x35x180(cm) KTB68068</span>
                         </a>
-                        <span class="item-price">3,923,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">3,923,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-long-chim-KTB68083.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ trưng bày lồng chim 4 tầng khung màu vàng đồng KTB68083</span>
                         </a>
-                        <span class="item-price">1,626,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,626,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-khung-sat-KTB68076.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ trang trí gỗ cao su khung sắt có tủ dưới 100x30x180(cm) KTB68076</span>
                         </a>
-                        <span class="item-price">3,254,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">3,254,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-sat-KTB68078.jpeg" alt="" class="item-image">
                             <span class="item-name">Hệ kệ trưng bày gỗ cao su khung sắt sơn tĩnh điện 180x30x180cm KTB68078</span>
                         </a>
-                        <span class="item-price">6,629,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">6,629,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-sach-KS68137.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ sách trang trí 4 tầng gỗ khung sắt cao su KS68137</span>
                         </a>
-                        <span class="item-price">1,720,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,720,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ks68112-ke-sach-go-de-chan-sat-01_2ghd-jr.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách 4 tầng 80x35x130cm gỗ cao su đế chân sắt KS68112</span>
                         </a>
-                        <span class="item-price">2,783,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">2,783,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-sach-KS68148.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách đơn giản 3 tầng 9 ngăn gỗ cao su KS68148</span>
                         </a>
-                        <span class="item-price">1,794,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,794,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-hoc-keo-2.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách trang trí có ngăn kéo khung sắt gỗ cao su KS68130</span>
                         </a>
-                        <span class="item-price">3,654,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">3,654,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-trang-tri-3-tang-KS68124-r01.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ 3 tầng khung sắt gỗ cao su KS68124</span>
                         </a>
-                        <span class="item-price">1,770,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,770,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-sach-KS68097.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ sách, kệ trang trí VEGA 4 tầng có hộc tủ KS68097</span>
                         </a>
-                        <span class="item-price">1,914,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,914,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-gony-KS68100.jpeg" alt="" class="item-image">
                             <span class="item-name">Kệ trang trí GONY 4 tầng gỗ cao su kết hợp khung sắt KS68100</span>
                         </a>
-                        <span class="item-price">1,265,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,265,000<span>&nbspvnđ</span></span>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/shelf/ke-khung-sat-KTB68044.jpg" alt="" class="item-image">
                             <span class="item-name">Kệ sách trang trí TRAP-SHELF gỗ cao su khung sắt KTB68044</span>
                         </a>
-                        <span class="item-price">1,990,000&nbsp<span>vnđ</span></span>
+                        <span class="item-price">1,990,000<span>&nbspvnđ</span></span>
                     </li>
                 </ul>
             </div>
