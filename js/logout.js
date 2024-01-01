@@ -1,8 +1,6 @@
-const btnLogOut = document.querySelector(".dropdown-btn.logout");
+const logout = () => {
+    localStorage.removeItem("auth");
+    window.location.reload();
+};
 
-if (btnLogOut) {
-    btnLogOut.addEventListener("click", () => {
-        localStorage.removeItem("isLoggedIn");
-        window.location.reload();
-    });
-}
+export default logout;

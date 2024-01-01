@@ -32,10 +32,10 @@
 .cart-products-table tbody td input[type="number"] {
     width: 50px;
     font-size: 15px;
-    padding: 10px;
+    margin-left: 40px;
 }
 
-.cart-products-table tbody>* {
+.cart-products-table tbody > * {
     text-align: center;
     font-size: 17px;
 }
@@ -72,8 +72,8 @@
     margin: 30px 0;
 }
 
-.button-container>.left-btn,
-.button-container>.right-btn {
+.button-container > .left-btn,
+.button-container > .right-btn {
     display: flex;
     gap: 20px;
 }

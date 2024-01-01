@@ -23,8 +23,6 @@ if (passwordInput) {
     });
 }
 
-console.log(email, password);
-
 if (signInBtn) {
     signInBtn.addEventListener("click", () => {
         const [loggedAccount] = accounts.filter((account) => {
@@ -39,11 +37,16 @@ if (signInBtn) {
                 formTitle.insertAdjacentHTML("afterend", errorText);
             }
         } else {
-            localStorage.setItem("isLoggedIn", true);
-            email = loggedAccount.email;
+            localStorage.setItem(
+                "auth",
+                JSON.stringify({
+                    isLoggedIn: true,
+                    email: loggedAccount.email,
+                })
+            );
             if (loggedAccount.role === "admin") {
                 window.location.replace(
-                    "http://127.0.0.1:5500/pages/admin/index.html"
+                    "http://127.0.0.1:5500/pages/admin/quan-ly-san-pham.html"
                 );
             } else {
                 window.location.replace(
@@ -53,5 +56,3 @@ if (signInBtn) {
         }
     });
 }
-
-export default email;

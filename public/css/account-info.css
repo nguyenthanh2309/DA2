@@ -1,0 +1,42 @@
+.form .preview-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form .preview-image > img {
+    max-width: 300px;
+}
+
+.form .add-avatar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form .add-avatar-button > label {
+    background-color: var(--primary-btn-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form .add-avatar-button > label > i {
+    font-size: 12px;
+}
+
+.form .add-avatar-button > input[type="file"] {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: -1;
+    opacity: 0;
+}

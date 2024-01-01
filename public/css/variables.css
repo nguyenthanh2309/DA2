@@ -1,12 +1,12 @@
 :root {
-    --primary-font: 'Roboto', sans-serif;
-    --secondary-font: 'Open Sans', sans-serif;
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
     --red-color: #ea0000;
     --nav-unhovered-border: 3px solid transparent;
     --nav-hovered-border: 3px solid #333;
     --header-tools-border: 1px solid #ccc;
     --nav-active-color: #ea0000;
-    --nav-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .06);
+    --nav-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06);
     --nav-link-color: #333;
     --subnav-box-shadow: 0 0 8px #00000030;
     --input-box-bg: #f7f7f7;
@@ -22,11 +22,30 @@
     --table-bs: 0 1px 0 #00000012;
     --table-bg-color: #ffffff;
     --table-br: 12px;
-    --table-heading-bg-color: #f7f7f7;
-    --table-heading-color: #616161;
     --table-heading-border-top: 1px solid #e3e3e3;
     --table-heading-fs: 13px;
     --table-cell-fs: 14px;
-    --table-cell-border: 1px solid #e3e3e3;
+    --table-cell-border: 1px solid #ccc;
+}
+
+[data-theme="dark"] {
+    --primary-color: #121212;
+    --secondary-color: #fff;
+    --admin-bg-color: #2c2c2c;
+    --table-heading-bg-color: #2c2c2c;
+    --btn-bg-color: #121212;
+    --btn-color: #fff;
+    --active-btn-bg-color: #fff;
+    --active-btn-color: #121212;
+}
+
+[data-theme="light"] {
+    --primary-color: #fff;
+    --secondary-color: #333;
     --admin-bg-color: #f1f1f1;
+    --btn-bg-color: #fff;
+    --btn-color: #121212;
+    --table-heading-bg-color: #f7f7f7;
+    --active-btn-bg-color: #121212;
+    --active-btn-color: #fff;
 }

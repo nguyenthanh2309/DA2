@@ -4,28 +4,28 @@
     padding: 40px 0;
 }
 
-.product-details-container>.product-image {
+.product-details-container > .product-image {
     flex-basis: 50%;
 }
 
-.product-details-container>.product-details {
+.product-details-container > .product-details {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.product-details-container>.product-details>.product-title {
+.product-details-container > .product-details > .product-title {
     font-size: 30px;
 }
 
-.product-details>.product-rating-container {
+.product-details > .product-rating-container {
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
-.product-rating-container>.ratings>* {
+.product-rating-container > .ratings > * {
     color: var(--star-icon-clr);
     font-size: 13px;
 }
@@ -39,7 +39,7 @@
     border: 1px solid #eaeaea;
 }
 
-.product-form>.product-price>span {
+.product-form > .product-price > span {
     font-weight: 500;
     font-size: 28px;
 }
@@ -60,22 +60,22 @@
     font-weight: 500;
 }
 
-.product-form .status>span:last-child {
+.product-form .status > span:last-child {
     color: #48ab1d;
 }
 
-.product-form .input-container> :not(label) {
+.product-form .input-container > :not(label) {
     padding: 8px 12px;
     background-color: #f7f7f7;
     border: none;
     outline: none;
 }
 
-.product-form .input-container>select {
+.product-form .input-container > select {
     font-size: 16px;
 }
 
-.product-form input[type=number] {
+.product-form input[type="number"] {
     width: 35px;
     padding: 10px 5px;
 }
@@ -89,12 +89,12 @@
     border-radius: 5px;
 }
 
-.product-form>.form-btn-container {
+.product-form > .form-btn-container {
     display: flex;
     gap: 10px;
 }
 
-.product-form>.form-btn-container>* {
+.product-form > .form-btn-container > * {
     flex-basis: 50%;
     padding: 18px 0;
     font-size: 17px;
@@ -104,43 +104,43 @@
     outline: none;
 }
 
-.product-form>.form-btn-container>*:hover {
+.product-form > .form-btn-container > *:hover {
     background-color: #303030 !important;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.product-form>.form-btn-container>button:first-child {
+.product-form > .form-btn-container > button:first-child {
     background-color: #0595af;
 }
 
-.product-form>.form-btn-container>button:last-child {
+.product-form > .form-btn-container > button:last-child {
     background-color: #ff802c;
 }
 
-.product-details>.shipping-details {
+.product-details > .shipping-details {
     background-color: #f7f7f7;
     padding: 10px;
 }
 
-.product-details>.shipping-details>ul {
+.product-details > .shipping-details > ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.product-details>.shipping-details>ul>li {
+.product-details > .shipping-details > ul > li {
     list-style-type: disc;
     font-weight: 500;
     font-size: 15px;
 }
 
-.product-details>.shipping-details>ul>li>i {
+.product-details > .shipping-details > ul > li > i {
     display: inline-block;
     margin: 10px 0;
     font-weight: 400;
 }
 
-.product-details-container>.product-desc {
+.product-details-container > .product-desc {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -148,7 +148,7 @@
     box-shadow: 0 2px 4px 0 #ccc;
 }
 
-.product-desc>.product-desc-header {
+.product-desc > .product-desc-header {
     background-color: #f7f7f7;
     padding: 10px 20px;
     font-size: 30px;
@@ -156,28 +156,28 @@
     border-top-right-radius: 15px;
 }
 
-.product-desc>.product-desc-content {
+.product-desc > .product-desc-content {
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.product-desc>.product-desc-content>* {
+.product-desc > .product-desc-content > * {
     font-size: 17px;
 }
 
-.product-desc>.product-desc-content>h6 {
+.product-desc > .product-desc-content > h6 {
     margin-top: 15px;
 }
 
-.product-desc>.product-desc-content>ul {
+.product-desc > .product-desc-content > ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.product-desc>.product-desc-content>ul>li {
+.product-desc > .product-desc-content > ul > li {
     list-style: disc;
     margin-left: 20px;
 }

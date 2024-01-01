@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="../public/assets/favicon/logo_default-16x16.png" type="image/x-icon">
     <script type="module" src="../js/index.js" defer></script>
-    <script type="module" src="../js/logout.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +35,12 @@
                             <input type="text" name="" id="" class="search-box" placeholder="Tìm kiếm sản phẩm..." />
                             <i class="fa-solid fa-magnifying-glass search-icon"></i>
                         </div>
-                        <div class="tools-cart"> <a href="./giohang.html"><i class="fa-solid fa-cart-shopping cart-icon"></i></a> </div>
+                        <div class="tools-cart">
+                            <span class="cart-badge">0</span>
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <div class="cart-dropdown-menu">
+                            </div>
+                        </div>
                         <div class="tools-user-container">
                             <button class="tools-user-btn"><i class="fa-regular fa-user user-icon"></i></button>
                             <div class="tools-user-dropdown">
@@ -202,7 +207,7 @@
             <div class="category-container">
                 <ul class="category-list grid-8-col">
                     <li class="category-list-item">
-                        <a href="" class="item-link">
+                        <a href="./ban-lam-viec.html" class="item-link">
                             <img src="../public/assets/categories/banlamviec.jpg" alt="bàn làm việc" class="item-image">
                             <span class="item-name">Bàn Làm Việc</span>
                         </a>
@@ -519,27 +524,29 @@
             </div>
         </div>
     </section>
-    <div class="layout-container">
-        <div class="banner-offer-list">
-            <div class="offer-list-item">
-                <a href="" class="item-link">
-                    <img src="../public/assets/banner-offer/banlamviec.jpg" alt="bàn làm việc" class="item-img">
-                </a>
-            </div>
-            <div class="offer-list-item">
-                <a href="" class="item-link">
-                    <img src="../public/assets/banner-offer/banlienkesach.jpg" alt="bàn liền kệ sách" class="item-img">
-                </a>
-            </div>
-            <div class="offer-list-item">
-                <a href="" class="item-link">
-                    <img src="../public/assets/banner-offer/bangocchul.jpg" alt="bàn gỗ chữ l" class="item-img">
-                </a>
-            </div>
-            <div class="offer-list-item">
-                <a href="" class="item-link">
-                    <img src="../public/assets/banner-offer/banflexidesk.jpg" alt="bàn flexidesk" class="item-img">
-                </a>
+    <div class="banner-offer spacing">
+        <div class="layout-container">
+            <div class="banner-offer-list">
+                <div class="offer-list-item">
+                    <a href="" class="item-link">
+                        <img src="../public/assets/banner-offer/banlamviec.jpg" alt="bàn làm việc" class="item-img">
+                    </a>
+                </div>
+                <div class="offer-list-item">
+                    <a href="" class="item-link">
+                        <img src="../public/assets/banner-offer/banlienkesach.jpg" alt="bàn liền kệ sách" class="item-img">
+                    </a>
+                </div>
+                <div class="offer-list-item">
+                    <a href="" class="item-link">
+                        <img src="../public/assets/banner-offer/bangocchul.jpg" alt="bàn gỗ chữ l" class="item-img">
+                    </a>
+                </div>
+                <div class="offer-list-item">
+                    <a href="" class="item-link">
+                        <img src="../public/assets/banner-offer/banflexidesk.jpg" alt="bàn flexidesk" class="item-img">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -647,126 +654,180 @@
                             <img src="../public/assets/products/office/ban-giam-doc-bgd68056-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn lãnh đạo 160x70cm gỗ tràm chân kết hợp tủ BGD68056</span>
                         </a>
-                        <span class="item-price">5,646,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">5,646,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-120x60cm-go-plywood-chan-sat-oval-hbov033-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc 120x60cm gỗ Plywood phủ melamin chân sắt Oval HBOV033</span>
                         </a>
-                        <span class="item-price">1,383,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">1,383,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-140x70cm-go-plywood-chan-sat-hbco034-03.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn làm việc 140x70cm gỗ Plywood phủ melamin chân sắt Cone HBCO034</span>
                         </a>
-                        <span class="item-price">2,194,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,194,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-6-uconcept-1.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 6 360x120 hệ UConcept chân sắt lắp ráp HBUC015</span>
                         </a>
-                        <span class="item-price">6,136,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">6,136,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-120x120cm-go-plywood-chan-xconcept-hbxc036-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 120x120cm gỗ Plywood phủ melamin hệ Xconcept HBXC036</span>
                         </a>
-                        <span class="item-price">2,853,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,853,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-120x120cm-go-plywood-chan-trapeze-hbtc035-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 120x120cm gỗ Plywood phủ melamin chân sắt Trapeze HBTC035</span>
                         </a>
-                        <span class="item-price">2,392,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,392,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum2-240x60cm-plywood-be-tong-hbrt050-03.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 2 240x60cm gỗ Plywood hệ RECTANG HBRT050</span>
                         </a>
-                        <span class="item-price">2,583,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">2,583,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-trapeze-hbtc036-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 gỗ Plywood 240x120cm chân sắt hệ Trapeze HBTC036</span>
                         </a>
-                        <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-oval-hbov039-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 người 240x120cm gỗ Plywood chân hệ Uconcept HBUC047</span>
                         </a>
-                        <span class="item-price">4,211,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,211,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum3-140x60cm-he-lego2-03_mgxr-ow.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 3 bàn hình thang 140x60cm gỗ cao su hệ Lego 2 HBLG029</span>
                         </a>
-                        <span class="item-price">3,990,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,990,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-4-240x120cm-go-tram-chan-sat-lap-rap-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 gỗ tràm 120x240cm chân sắt lắp ráp hệ Wooden HBWD012</span>
                         </a>
-                        <span class="item-price">4,880,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,880,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum4-240x120cm-go-plywood-chan-oval-hbov039-02.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 4 240x120cm gỗ Plywood phủ chân sắt Oval HBOV039</span>
                         </a>
-                        <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,306,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-co-ngan-keo-tam-chan-BGD68046-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc 160x70cm 2 hộc kéo và tấm chắn BGD68055</span>
                         </a>
-                        <span class="item-price">4,594,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,594,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-co-ngan-keo-tam-chan-BGD68046-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc 160x70cm có hộc kéo và tấm chắn BGD68046</span>
                         </a>
-                        <span class="item-price">5,262,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">5,262,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-giam-doc-go-tram-BGD68049-01.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn giám đốc có tấm chắn Gỗ Tràm chân sắt BGD68049</span>
                         </a>
-                        <span class="item-price">4,911,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">4,911,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum-8-mini-go-plywood-he-lego-01_ob9b-13.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 8 bàn hình thang gỗ Plywood hệ Lego chân sắt Oval HBLG020</span>
                         </a>
-                        <span class="item-price">8,990,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">8,990,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-cum3-he-ban-lego2-go-cao-su-chan-oval-02_vnt3-h6.jpg" alt="" class="item-image">
                             <span class="item-name">Cụm 3 bàn hình thang 120x60cm gỗ cao su hệ Lego 2 HBLG025</span>
                         </a>
-                        <span class="item-price">3,590,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">3,590,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                     <li class="product-list-item">
                         <a href="" class="item-link">
                             <img src="../public/assets/products/office/ban-van-phong-cum-3-nguoi-RECTANG_CONCEPT_1_-_Copy.jpg" alt="" class="item-image">
                             <span class="item-name">Bàn cụm 3 người 240x208 Rectang Concept chân sắt lắp ráp HBRT025</span>
                         </a>
-                        <span class="item-price">7,691,000<span>&nbspvnđ</span></span>
+                        <div class="wrapper">
+                            <span class="item-price">7,691,000<span>&nbspvnđ</span></span>
+                            <button class="btn-add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
                     </li>
                 </ul>
             </div>

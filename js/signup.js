@@ -58,21 +58,27 @@ const checkReinputPassword = (password, reinputPassword) => {
     }
 };
 
-emailInput.addEventListener("input", (e) => {
-    if (checkEmail(e.target.value)) {
-        email = e.target.value;
-    }
-});
+if (emailInput) {
+    emailInput.addEventListener("input", (e) => {
+        if (checkEmail(e.target.value)) {
+            email = e.target.value;
+        }
+    });
+}
 
-passwordInput.addEventListener("input", (e) => {
-    if (checkPassword(e.target.value)) {
-        password = e.target.value;
-    }
-});
+if (passwordInput) {
+    passwordInput.addEventListener("input", (e) => {
+        if (checkPassword(e.target.value)) {
+            password = e.target.value;
+        }
+    });
+}
 
-reinputPasswordInput.addEventListener("input", (e) => {
-    checkReinputPassword(password, e.target.value);
-});
+if (reinputPasswordInput) {
+    reinputPasswordInput.addEventListener("input", (e) => {
+        checkReinputPassword(password, e.target.value);
+    });
+}
 
 const handleSignUp = () => {
     const errors = document.querySelectorAll(".field-container span.error");
@@ -84,4 +90,6 @@ const handleSignUp = () => {
     }
 };
 
-submitBtn.addEventListener("click", handleSignUp);
+if (submitBtn) {
+    submitBtn.addEventListener("click", handleSignUp);
+}
