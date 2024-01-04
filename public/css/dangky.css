@@ -12,34 +12,34 @@
 }
 
 .form-title {
-    font-size: 25.6px;
-    padding: 10px 20px;
+    font-size: 28px;
+    padding: 15px 20px;
     background-color: #f2f2f2;
     border-bottom: 1px solid #ccc;
 }
 
-.form > fieldset {
+.form>fieldset {
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form > fieldset > .field-container {
+.form>fieldset>.field-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.field-container > .field-label {
-    font-size: 14px;
+.field-container>.field-label {
+    font-size: 16px;
 }
 
-.field-container > .field-label > span {
+.field-container>.field-label>span {
     color: var(--red-color);
 }
 
-.field-container > .field-input {
+.field-container>.field-input {
     border: 1px solid transparent;
     outline: none;
     background-color: var(--input-box-bg);
@@ -47,13 +47,13 @@
     font-size: 16px;
 }
 
-.form > .btn-container {
+.form>.btn-container {
     margin: 25px 20px;
     padding: 20px 15px;
     background-color: #f2f2f2;
 }
 
-.form > .btn-container > .submit-btn {
+.form>.btn-container>.submit-btn {
     padding: 10px 15px;
     font-size: 15px;
     border: none;
@@ -72,17 +72,17 @@
     margin-left: 10%;
 }
 
-.account-benefits > h5 {
+.account-benefits>h5 {
     font-size: 19px;
 }
 
-.account-benefits > ul {
+.account-benefits>ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.account-benefits > ul > li {
+.account-benefits>ul>li {
     font-size: 14px;
     text-align: left;
     list-style-type: disc;

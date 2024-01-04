@@ -6,7 +6,7 @@ const reinputPasswordInput = document.querySelector(
 const submitBtn = document.querySelector("#sign-up-form .submit-btn");
 
 const emailRegExp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$";
-const passwordRegExp = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+const passwordRegExp = /^(?=.*[A-Z])(?=.*[\W_]).{6,}$/;
 
 let email = "";
 let password = "";
@@ -41,7 +41,7 @@ const checkPassword = (password) => {
     if (!password.match(passwordRegExp)) {
         showInputError(
             passwordInput,
-            "Mật khẩu không hợp lệ. Yêu cầu ít nhất 8 kí tự, ít nhất 1 kí tự viết hoa, ít nhất 1 kí tự đặc biệt"
+            "Mật khẩu không hợp lệ. Yêu cầu ít nhất 6 kí tự, ít nhất 1 kí tự viết hoa, ít nhất 1 kí tự đặc biệt"
         );
         return false;
     } else {
@@ -84,7 +84,12 @@ const handleSignUp = () => {
     const errors = document.querySelectorAll(".field-container span.error");
     if (errors.length === 0 && email !== "" && password !== "") {
         const accounts = JSON.parse(localStorage.getItem("accounts"));
-        accounts.push({ email: email, password: password, role: "user" });
+        accounts.push({
+            avatar: "../public/assets/default-avatar.webp",
+            email: email,
+            password: btoa(password),
+            role: "user",
+        });
         localStorage.setItem("accounts", JSON.stringify(accounts));
         window.location.replace("http://127.0.0.1:5500/pages/dangnhap.html");
     }

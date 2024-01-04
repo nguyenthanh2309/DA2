@@ -119,6 +119,9 @@ const handleCheckBox = (page) => {
 const addProductBtn = document.querySelector(
     "#products-table-tools .tools-btn-add"
 );
+const searchProductInput = document.querySelector(
+    "#products-table-tools #search-form input"
+);
 const listProductsSection = document.querySelector(".list-products-section");
 
 const openAddProductDialog = () => {
@@ -263,6 +266,12 @@ if (addProductBtn) {
     });
 }
 
+if (searchProductInput) {
+    searchProductInput.addEventListener("input", (e) => {
+        loadProducts({ search: e.target.value });
+    });
+}
+
 loadProducts();
 handleCheckBox("products");
 //#endregion
@@ -287,7 +296,7 @@ const listSuppliersSection = document.querySelector(".list-suppliers-section");
 loadSuppliers();
 //#endregion
 
-//#region handle acount manage page
+//#region handle account manage page
 const addAccountBtn = document.querySelector(
     "#accounts-table-tools .tools-btn-add"
 );
@@ -321,5 +330,39 @@ btnSwitchThemeLight.addEventListener("click", () => {
 });
 
 setTheme();
+
+//#endregion
+
+//#region handle button filter event
+
+const filterBtn = document.querySelector(".tools-btn-filter>button");
+const filterDropdown = document.querySelector(
+    ".tools-btn-filter>.filter-dropdown"
+);
+const filterOptions = document.querySelectorAll(
+    ".tools-btn-filter>.filter-dropdown input[type=radio]"
+);
+
+if (filterBtn) {
+    filterBtn.addEventListener("click", () => {
+        filterDropdown.classList.toggle("active");
+    });
+}
+
+filterOptions.forEach((option) => {
+    option.addEventListener("change", (e) => {
+        if (e.target.checked) {
+            if (option.id === "ascended-alphabet") {
+                loadProducts({ ascendedAlphabet: true });
+            } else if (option.id === "descended-alphabet") {
+                loadProducts({ descendedAlphabet: true });
+            } else if (option.id === "ascended-price") {
+                loadProducts({ ascendedPrice: true });
+            } else if (option.id === "descended-price") {
+                loadProducts({ descendedPrice: true });
+            }
+        }
+    });
+});
 
 //#endregion

@@ -1,22 +1,100 @@
-.form .preview-image {
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 #ccc;
+    flex-basis: 50%;
+}
+
+.form-title {
+    font-size: 28px;
+    padding: 15px 20px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+.form>fieldset {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form>fieldset>.field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-container>.field-label {
+    font-size: 16px;
+}
+
+.field-container>.field-label>span {
+    color: var(--red-color);
+}
+
+.field-container>.field-input {
+    border: 1px solid transparent;
+    outline: none;
+    background-color: var(--input-box-bg);
+    padding: 8px;
+    font-size: 16px;
+}
+
+.form>.btn-container {
+    margin: 25px 20px;
+    padding: 20px 15px;
+    background-color: #f2f2f2;
+}
+
+.form>.btn-container>.submit-btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    background-color: var(--primary-btn-color);
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.form>.btn-container>.submit-btn:hover {
+    background-color: #303030;
+    transition: all 0.3s ease-in-out;
+}
+
+.form .error {
+    display: inline-block;
+    color: #ea0000;
+    padding: 10px 0;
+}
+
+.form .field-container:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
 }
 
-.form .preview-image > img {
-    max-width: 300px;
+.form .avatar-image {
+    margin: 10px 0;
+}
+
+.form .avatar-image>img {
+    width: 280px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: fill;
 }
 
 .form .add-avatar-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
-.form .add-avatar-button > label {
+.form .add-avatar-button>label {
     background-color: var(--primary-btn-color);
     color: #fff;
     padding: 10px 20px;
@@ -29,11 +107,11 @@
     gap: 10px;
 }
 
-.form .add-avatar-button > label > i {
+.form .add-avatar-button>label>i {
     font-size: 12px;
 }
 
-.form .add-avatar-button > input[type="file"] {
+.form .add-avatar-button>input[type="file"] {
     position: absolute;
     left: 60%;
     transform: translateX(-50%);

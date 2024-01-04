@@ -26,14 +26,17 @@ if (passwordInput) {
 if (signInBtn) {
     signInBtn.addEventListener("click", () => {
         const [loggedAccount] = accounts.filter((account) => {
-            if (account.email === email && account.password === password) {
+            if (
+                account.email === email &&
+                atob(account.password) === password
+            ) {
                 return true;
             }
             return false;
         });
 
         if (!loggedAccount) {
-            if (!formTitle.nextElementSibling) {
+            if (errorText.nextElementSibling) {
                 formTitle.insertAdjacentHTML("afterend", errorText);
             }
         } else {
@@ -41,7 +44,7 @@ if (signInBtn) {
                 "auth",
                 JSON.stringify({
                     isLoggedIn: true,
-                    email: loggedAccount.email,
+                    loggedAccount: loggedAccount,
                 })
             );
             if (loggedAccount.role === "admin") {

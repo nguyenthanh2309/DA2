@@ -77,13 +77,44 @@
                         </div>
                     </div>
                     <div class="right-tools">
-                        <button class="tools-btn-search" type="submit">
                         <form id="search-form">
-                            <input type="search" name="q" placeholder="Tìm kiếm sản phẩm theo mã/tên">
+                            <input type="search" name="q" placeholder="Tìm kiếm sản phẩm theo tên">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </form>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                        <button class="tools-btn-filter"><i class="fa-solid fa-filter"></i></button>
+                        </button>
+                        <div class="tools-btn-filter">
+                            <button type="button">
+                                <i class="fa-solid fa-sort"></i>
+                            </button>
+                            <div class="filter-dropdown">
+                                <ul class="dropdown-list">
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="ascended-alphabet">
+                                        <label for="ascended-alphabet">A-Z</label>
+                                    </li>
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="descended-alphabet">
+                                        <label for="descended-alphabet">Z-A</label>
+                                    </li>
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="ascended-price">
+                                        <label for="ascended-price">Giá tăng dần</label>
+                                    </li>
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="descended-price">
+                                        <label for="descended-price">Giá giảm dần</label>
+                                    </li>
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="newest">
+                                        <label for="newest">Mới nhẩt</label>
+                                    </li>
+                                    <li class="list-option">
+                                        <input type="radio" name="option" id="oldest">
+                                        <label for="oldest">Cũ nhẩt</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <button class="tools-btn-add"><i class="fa-solid fa-plus"></i>Thêm sản phẩm</button>
                     </div>
                 </div>
